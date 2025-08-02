@@ -1,4 +1,4 @@
-// components/Hero.jsx
+// components/Hero.js
 export default function Hero() {
   return (
     <section className="bg-green-100 py-16 px-4 text-center">
