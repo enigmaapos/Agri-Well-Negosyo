@@ -14,8 +14,8 @@
             background-color: #f7fafc;
         }
         .hero-bg {
-            /* This is the background image you provided. 
-               To change it, simply replace the URL below with a new one. */
+            /* This is the background image you provided.
+                To change it, simply replace the URL below with a new one. */
             background-image: url('https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?_gl=1*bp9rt9*_ga*MTg3NDQ2OTU5Ny4xNzU0MTE4NDg2*_ga_8JE65Q40S6*czE3NTQxMTg0ODYkbzEkZzEkdDE3NTQxMTkyNDQkajkkbDAkaDA.');
             background-size: cover;
             background-position: center;
@@ -210,6 +210,29 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Testimonial Video Section -->
+        <section id="testimonial-video" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Watch Our Success Stories</h2>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-xl rounded-xl overflow-hidden shadow-lg">
+                        <!-- YouTube Video Embed -->
+                        <div class="aspect-w-16 aspect-h-9" style="padding-bottom: 56.25%; position: relative;">
+                            <iframe
+                                src="https://www.youtube.com/embed/0voJje8weE4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                class="absolute top-0 left-0 w-full h-full rounded-xl"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 5. Success Stories -->
         <section id="success" class="py-20 bg-gray-50">
@@ -282,8 +305,16 @@
                         </ul>
                     </div>
                     <div class="relative w-full h-80 rounded-xl overflow-hidden shadow-lg">
-                        <!-- Updated map location from the user -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d510562.4500820173!2d103.8442501!3d1.3140001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96dce7aa152db%3A0xf409f442aa9a620a!2s1NatureCorp%20Davao%20Branch!5e0!3m2!1sen!2ssg!4v1754108821452!5m2!1sen!2ssg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- Corrected Google Maps embed with a simpler, more stable URL -->
+                        <iframe
+                            src="https://maps.google.com/maps?q=1NatureCorp%20Davao%20Branch&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </div>
             </div>
