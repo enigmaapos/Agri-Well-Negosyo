@@ -1,4 +1,4 @@
-// components/About.jsx
+// components/About.js
 export default function About() {
   return (
     <section className="bg-white py-12 px-4 text-gray-800" id="about">
