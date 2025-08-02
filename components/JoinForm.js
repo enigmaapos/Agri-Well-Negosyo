@@ -1,4 +1,4 @@
-// components/JoinForm.jsx
+// components/JoinForm.js
 export default function JoinForm() {
   return (
     <section className="bg-white py-12 px-4" id="join">
