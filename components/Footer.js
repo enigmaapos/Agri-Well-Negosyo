@@ -1,4 +1,4 @@
-// components/Footer.jsx
+// components/Footer.js
 export default function Footer() {
   return (
     <footer className="bg-green-800 text-white py-8 px-4 text-center">
