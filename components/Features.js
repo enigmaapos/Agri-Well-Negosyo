@@ -7,7 +7,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-green-50 py-12 px-4 text-gray-900">
+    <section id="features" className="bg-green-50 py-12 px-4 text-gray-900">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">What We Offer</h2>
         <div className="grid md:grid-cols-3 gap-6">

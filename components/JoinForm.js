@@ -1,7 +1,7 @@
 // components/JoinForm.js
 export default function JoinForm() {
   return (
-    <section className="bg-white py-12 px-4" id="join">
+    <section id="join" className="bg-white py-12 px-4">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Join Agri-Well Negosyo</h2>
         <form className="space-y-4 text-left">

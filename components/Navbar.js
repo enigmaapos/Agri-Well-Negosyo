@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-green-700">
+        <Link href="#home" className="text-2xl font-bold text-green-700">
           AgriWell
         </Link>
 
@@ -21,20 +21,20 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex space-x-6 font-medium text-gray-700">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/programs">Programs</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="#home">Home</Link></li>
+          <li><Link href="#about">About</Link></li>
+          <li><Link href="#features">Features</Link></li>
+          <li><Link href="#join">Join Us</Link></li>
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-white px-4 pb-4 space-y-3 font-medium text-gray-700">
-          <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
-          <li><Link href="/about" onClick={toggleMenu}>About</Link></li>
-          <li><Link href="/programs" onClick={toggleMenu}>Programs</Link></li>
-          <li><Link href="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li><Link href="#home" onClick={toggleMenu}>Home</Link></li>
+          <li><Link href="#about" onClick={toggleMenu}>About</Link></li>
+          <li><Link href="#features" onClick={toggleMenu}>Features</Link></li>
+          <li><Link href="#join" onClick={toggleMenu}>Join Us</Link></li>
         </ul>
       )}
     </nav>
