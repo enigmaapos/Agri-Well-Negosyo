@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Well Negosyo</title>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/c9e4b7/2d5b16?text=Organic+Farms+and+Wellness');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #4CAF50;
+            border-radius: 9999px;
+        }
+        .faq-item {
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-700">Agri-Well</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300">About Us</a>
+                <a href="#opportunities" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Opportunities</a>
+                <a href="#join" class="text-gray-600 hover:text-green-600 transition-colors duration-300">How to Join</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Contact</a>
+                <a href="#join-form" class="bg-green-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300">Join Now</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#opportunities" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Opportunities</a>
+            <a href="#join" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">How to Join</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="#join-form" class="block px-4 py-2 text-white bg-green-600 m-2 rounded-full text-center hover:bg-green-700">Join Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Landing Page / Home -->
+        <section id="home" class="hero-bg flex items-center justify-center text-white h-screen">
+            <div class="text-center bg-black bg-opacity-50 p-8 rounded-xl max-w-2xl mx-4">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Join the Agri-Wellness Revolution</h1>
+                <p class="text-lg md:text-xl mb-8">Empowering Filipino families through sustainable farming and holistic wellness.</p>
+                <a href="#join-form" class="bg-green-600 text-white font-bold px-8 py-4 rounded-full shadow-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-300">Join Now</a>
+            </div>
+        </section>
+
+        <!-- 2. About Us -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">About Us</h2>
+                </div>
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://placehold.co/800x600/e6f5e1/2d5b16?text=Agri-Well+Mission" alt="Our Mission" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4 text-green-700">Our Mission</h3>
+                            <p class="mb-6 leading-relaxed">
+                                Our mission is to promote health and sustainability through natural farming and holistic wellness, nurturing a greener planet and healthier lives.
+                            </p>
+                            <h3 class="text-2xl font-semibold mb-4 text-green-700">Our Vision</h3>
+                            <p class="leading-relaxed">
+                                We envision a future where every Filipino family is empowered with the knowledge and resources to achieve financial independence and total healing, one garden and one home at a time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Agri-Well Opportunities -->
+        <section id="opportunities" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Agri-Well Opportunities</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h4 class="text-xl font-semibold text-green-700 mb-2">Agriculture Products</h4>
+                        <p class="text-gray-600">Discover our range of organic vegetables, herbs, and easy-to-grow plant kits for your home garden.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h4 class="text-xl font-semibold text-green-700 mb-2">Wellness Products</h4>
+                        <p class="text-gray-600">Explore natural remedies like essential oils, herbal teas, and other products designed for holistic healing and well-being.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h4 class="text-xl font-semibold text-green-700 mb-2">Affiliate/Negosyo Kit</h4>
+                        <p class="text-gray-600">Start your own business with our comprehensive starter packages and a clear earnings breakdown to help you succeed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. How to Join -->
+        <section id="join" class="py-20 bg-green-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mx-auto">How to Join</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-green-800 rounded-xl shadow-lg">
+                        <h3 class="text-4xl font-bold mb-4">1</h3>
+                        <h4 class="text-xl font-semibold mb-2">Register Online</h4>
+                        <p>Fill out our simple form to get started on your journey.</p>
+                    </div>
+                    <div class="p-8 bg-green-800 rounded-xl shadow-lg">
+                        <h3 class="text-4xl font-bold mb-4">2</h3>
+                        <h4 class="text-xl font-semibold mb-2">Choose a Kit</h4>
+                        <p>Select the starter kit that best fits your goals—whether you want to farm, sell, or both!</p>
+                    </div>
+                    <div class="p-8 bg-green-800 rounded-xl shadow-lg">
+                        <h3 class="text-4xl font-bold mb-4">3</h3>
+                        <h4 class="text-xl font-semibold mb-2">Start Selling or Using</h4>
+                        <p>Begin your agri-wellness adventure and start earning or improving your health.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Form Section -->
+        <section id="join-form" class="py-20">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Registration Form</h2>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                    <form id="registration-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="contact" class="block text-sm font-medium text-gray-700">Contact Number</label>
+                            <input type="tel" id="contact" name="contact" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="area" class="block text-sm font-medium text-gray-700">Area / City</label>
+                            <input type="text" id="area" name="area" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="package" class="block text-sm font-medium text-gray-700">Package Option</label>
+                            <select id="package" name="package" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                                <option value="">Select a package</option>
+                                <option value="starter-agri">Starter Agri Kit</option>
+                                <option value="starter-well">Starter Wellness Kit</option>
+                                <option value="full-negosyo">Full Negosyo Kit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="referral" class="block text-sm font-medium text-gray-700">Referral Code (Optional)</label>
+                            <input type="text" id="referral" name="referral" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div class="flex items-center space-x-4">
+                             <input type="checkbox" id="terms" name="terms" required class="rounded text-green-600 focus:ring-green-500">
+                             <label for="terms" class="text-sm font-medium text-gray-700">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">Submit Application</button>
+                    </form>
+                    <div id="form-message" class="hidden mt-4 p-4 rounded-xl text-center font-semibold text-green-700 bg-green-100">
+                        Thank you for your registration! We will contact you shortly.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Success Stories -->
+        <section id="success" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Success Stories</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://placehold.co/128x128/e6f5e1/2d5b16?text=J.D." alt="Testimonial photo" class="rounded-full mb-4">
+                            <p class="text-gray-600 italic mb-4">"From backyard garden to full-time income! Agri-Well changed my life and my family's health."</p>
+                            <p class="font-semibold text-green-700">- Jane D., Pampanga</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://placehold.co/128x128/e6f5e1/2d5b16?text=M.S." alt="Testimonial photo" class="rounded-full mb-4">
+                            <p class="text-gray-600 italic mb-4">"I started with the wellness kit and now I'm sharing the benefits with my whole community."</p>
+                            <p class="font-semibold text-green-700">- Mark S., Metro Manila</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="https://placehold.co/128x128/e6f5e1/2d5b16?text=A.R." alt="Testimonial photo" class="rounded-full mb-4">
+                            <p class="text-gray-600 italic mb-4">"The training and support are amazing. It's more than a business, it's a family."</p>
+                            <p class="font-semibold text-green-700">- Ana R., Batangas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Page -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Contact Us</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-700">Get in Touch</h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.893 5.262A2 2 0 0012 14a2 2 0 001.107-.373L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <span>info@agri-well.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.261 1.015a5.426 5.426 0 005.105 5.105l1.015-2.261a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <span>+63 917 123 4567</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 6.363l-10-4.636-10 4.636 10 4.637 10-4.637zM4 10v9h16V10M4 10l8 4 8-4M4 19v-9"></path></svg>
+                                <span>Messenger & WhatsApp available</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative w-full h-80 rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.0827297298517!2d121.05436661483984!3d14.593593989803138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c784964648e5%3A0x6b2b7b5c117d9e7!2sBonifacio%20Global%20City!5e0!3m2!1sen!2sph!4v1628178864000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQs -->
+        <section id="faqs" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title mx-auto">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-xl shadow-lg faq-item">
+                        <h4 class="flex justify-between items-center text-lg font-semibold text-green-700">
+                            <span>Can I join without farming experience?</span>
+                            <span class="faq-icon text-xl">+</span>
+                        </h4>
+                        <div class="faq-answer mt-4 text-gray-600">
+                            <p>Yes, absolutely! We provide all the necessary training and support. Our kits are designed for beginners, and our community is here to help you every step of the way.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg faq-item">
+                        <h4 class="flex justify-between items-center text-lg font-semibold text-green-700">
+                            <span>What’s included in the wellness kits?</span>
+                            <span class="faq-icon text-xl">+</span>
+                        </h4>
+                        <div class="faq-answer mt-4 text-gray-600">
+                            <p>Our wellness kits are packed with essential oils, herbal teas, natural food supplements, and guidebooks on holistic healing practices. The contents may vary by package, but they are all curated for your well-being.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg faq-item">
+                        <h4 class="flex justify-between items-center text-lg font-semibold text-green-700">
+                            <span>Can I earn even as a part-timer?</span>
+                            <span class="faq-icon text-xl">+</span>
+                        </h4>
+                        <div class="faq-answer mt-4 text-gray-600">
+                            <p>Of course! The Agri-Well business model is flexible and perfect for part-timers. You can work at your own pace, set your own hours, and still achieve great success by using our comprehensive earning breakdown and marketing tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">&copy; 2024 Agri-Well Negosyo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // FAQ accordion functionality
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('open');
+                    const icon = item.querySelector('.faq-icon');
+                    if (item.classList.contains('open')) {
+                        icon.textContent = '–';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+
+            // Handle form submission
+            const form = document.getElementById('registration-form');
+            const formMessage = document.getElementById('form-message');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent page reload
+                // In a real application, you would send this data to a backend here.
+                form.reset();
+                formMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000); // Hide message after 5 seconds
+            });
+        });
+    </script>
+</body>
+</html>
