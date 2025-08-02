@@ -1,4 +1,4 @@
-// components/Features.jsx
+// components/Features.js
 const features = [
   { title: "Organic Farming Kits", desc: "Easy starter packs for vegetables and herbs." },
   { title: "Wellness Coaching", desc: "Support for mental, physical, and emotional health." },
